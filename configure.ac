@@ -1,6 +1,7 @@
 AC_INIT([startup-notification], [0.12],
         [http://www.freedesktop.org/Software/startup-notification])
 AC_CONFIG_SRCDIR(libsn/sn-launchee.c)
+AC_CONFIG_MACRO_DIRS([m4])
 
 AM_INIT_AUTOMAKE
 AM_CONFIG_HEADER(config.h)
