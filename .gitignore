@@ -1,0 +1,108 @@
+#
+# NOTE! Please use 'git ls-files -i --exclude-standard'
+# command after changing this file, to see if there are
+# any tracked files which get ignored after the change.
+#
+# Normal rules
+#
+_*
+*~
+*.bin
+*.bz2
+*.d
+*.elf
+*.gz
+*.inc
+*.log
+*.lzma
+*.lzo
+*.mo
+*.gmo
+*.o
+*.a
+*.la
+*.lo
+*.o.*
+*.patch
+*.pox
+*.sw[nop]
+*.xz
+
+#
+# Debian directory (make deb-pkg)
+#
+/debian/
+
+#
+# git files that we don't want to ignore even it they are dot-files
+#
+!.gitignore
+
+#
+# Generic/generated files
+#
+ABOUT-NLS
+aclocal.m4
+autom4te.cache/
+config.h
+config.h.in
+config.log
+config.status
+configure
+configure.ac.bak
+configure.scan
+m4/
+Makefile
+Makefile.in
+po/boldquot.sed
+po/en@boldquot.header
+po/en@quot.header
+# pot file is used by Weblate
+po/insert-header.sin
+po/Makefile
+po/Makefile.in
+po/Makefile.in.in
+po/Makevars.template
+po/POTFILES
+po/quot.sed
+po/remove-potcdate.sed
+po/remove-potcdate.sin
+po/Rules-quot
+po/stamp-po
+
+# Debian/Ubuntu test build
+stamp-*
+
+# CMake example build
+build/
+
+# stgit generated dirs
+patches-*
+
+# quilt's files
+patches
+series
+
+# cscope files
+cscope.*
+ncscope.*
+
+# ctags/etags files
+tags
+TAGS
+
+# gnu global files
+GPATH
+GRTAGS
+GSYMS
+GTAGS
+
+*.orig
+*~
+\#*#
+.nfs*
+
+# Eclipse project metadata
+.cproject
+.project
+.settings
