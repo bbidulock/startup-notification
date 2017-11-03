@@ -25,8 +25,6 @@ if test "x$GCC" = "xyes"; then
 fi
 changequote([,])dnl
 
-AC_PATH_XTRA
-
 if test x$no_x = xyes ; then
   AC_MSG_ERROR([X11 development libraries/headers not found])
 fi
