@@ -44,16 +44,26 @@ _*
 ABOUT-NLS
 aclocal.m4
 autom4te.cache/
+compile
+config.guess
 config.h
 config.h.in
 config.log
 config.status
+config.sub
 configure
 configure.ac.bak
 configure.scan
+depcomp
+INSTALL
+install-sh
+libstartup-notification-1.0.pc
+libtool
+ltmain.sh
 m4/
 Makefile
 Makefile.in
+missing
 po/boldquot.sed
 po/en@boldquot.header
 po/en@quot.header
@@ -69,6 +79,8 @@ po/remove-potcdate.sed
 po/remove-potcdate.sin
 po/Rules-quot
 po/stamp-po
+.deps/
+.libs/
 
 # Debian/Ubuntu test build
 stamp-*
