@@ -83,6 +83,11 @@ void        sn_startup_sequence_get_initiated_time        (SnStartupSequence *se
 void        sn_startup_sequence_get_last_active_time      (SnStartupSequence *sequence,
                                                            time_t            *tv_sec,
                                                            suseconds_t       *tv_usec);
+#define     sn_startup_sequence_get_names_and_values \
+            sn_startup_sequence_get_names_and_values
+void        sn_startup_sequence_get_names_and_values      (SnStartupSequence *sequence,
+                                                           char              ***names,
+                                                           char              ***values);
 
 void        sn_startup_sequence_complete                  (SnStartupSequence *sequence);
 

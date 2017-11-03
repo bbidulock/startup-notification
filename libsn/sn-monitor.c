@@ -76,6 +76,9 @@ struct SnStartupSequence
   int creation_serial;
 
   struct timeval initiation_time;
+
+  char **names;
+  char **values;
 };
 
 static SnList *context_list = NULL;
@@ -271,6 +274,8 @@ sn_startup_sequence_unref (SnStartupSequence *sequence)
       sn_free (sequence->binary_name);
       sn_free (sequence->icon_name);
       sn_free (sequence->application_id);
+      sn_internal_strfreev (sequence->names);
+      sn_internal_strfreev (sequence->values);
 
       sn_display_unref (sequence->display);
       sn_free (sequence);
@@ -394,6 +399,17 @@ sn_startup_sequence_get_last_active_time (SnStartupSequence *sequence,
     *tv_sec = sequence->initiation_time.tv_sec;
   if (tv_usec)
     *tv_usec = sequence->initiation_time.tv_usec;
+}
+
+void
+sn_startup_sequence_get_names_and_values (SnStartupSequence *sequence,
+                                          char              ***names,
+                                          char              ***values)
+{
+  if (names)
+    *names = sequence->names;
+  if (values)
+    *values = sequence->values;
 }
 
 void
@@ -765,6 +781,12 @@ xmessage_func (SnDisplay  *display,
     {
       sn_bool_t changed = FALSE;
 
+      sn_internal_strfreev (names);
+      sn_internal_strfreev (values);
+
+      sequence->names = names;
+      sequence->values = values;
+
       i = 0;
       while (names[i])
         {
@@ -924,6 +946,4 @@ xmessage_func (SnDisplay  *display,
     }
   
   sn_free (prefix);
-  sn_internal_strfreev (names);
-  sn_internal_strfreev (values);
 }
