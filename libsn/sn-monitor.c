@@ -781,8 +781,8 @@ xmessage_func (SnDisplay  *display,
     {
       sn_bool_t changed = FALSE;
 
-      sn_internal_strfreev (names);
-      sn_internal_strfreev (values);
+      sn_internal_strfreev (sequence->names);
+      sn_internal_strfreev (sequence->values);
 
       sequence->names = names;
       sequence->values = values;
