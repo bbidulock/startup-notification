@@ -1,5 +1,5 @@
 
-AM_CPFLAGS=-I$(top_srcdir) $(LIBSN_CFLAGS) -DSN_API_NOT_YET_FROZEN=1
+AM_CPPFLAGS=-I$(top_srcdir) $(LIBSN_CFLAGS) -DSN_API_NOT_YET_FROZEN=1
 
 libsnincludedir=$(includedir)/startup-notification-1.0/libsn
 
